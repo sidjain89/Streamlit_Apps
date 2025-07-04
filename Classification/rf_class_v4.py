@@ -16,16 +16,16 @@ st.set_page_config(page_title="Random Forest Classifier", layout="wide")
 st.title("🌲 Random Forest Classification App")
 
 # Upload data
-st.sidebar.header("Upload CSV")
+st.sidebar.header("1. Upload CSV")
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
-    st.subheader("Preview of Dataset")
+    st.subheader("2. Preview of Dataset")
     st.dataframe(df.head())
 
     with st.sidebar:
-        st.header("Feature Selection")
+        st.header("3. Feature Selection")
         all_columns = df.columns.tolist()
         default_target = df.columns[-1]
         target_column = st.selectbox("Select target column", all_columns, index=all_columns.index(default_target))
@@ -52,7 +52,7 @@ if uploaded_file is not None:
         tab1, tab2, tab3 = st.tabs(["🔍 EDA", "🧠 Model", "📦 Download"])
 
         with tab1:
-            st.subheader("Exploratory Data Analysis")
+            st.subheader("4. Exploratory Data Analysis")
             with st.expander("🔍 Custom EDA Visualizations", expanded=False):
                 if selected_features and target_column:
                     eda_options = st.multiselect(
@@ -98,7 +98,7 @@ if uploaded_file is not None:
         with tab2:
             st.subheader("Train Random Forest Classifier")
 
-            st.sidebar.header("Model Hyperparameters")
+            st.sidebar.header("5. Model Hyperparameters")
             n_estimators = st.sidebar.slider("Number of trees", 10, 300, 100, 10)
             max_depth = st.sidebar.slider("Max depth", 1, 20, 5)
             max_features = st.sidebar.selectbox("Max features", ["sqrt", "log2", None])
@@ -152,7 +152,7 @@ if uploaded_file is not None:
                 y_test = st.session_state["y_test"]
                 y_train = st.session_state["y_train"]
 
-                st.subheader("Model Evaluation")
+                st.subheader("6. Model Evaluation")
                 y_train_pred = model.predict(X_train)
                 y_test_pred = model.predict(X_test)
 
@@ -173,7 +173,7 @@ if uploaded_file is not None:
                 sns.barplot(x=feat_importance, y=feat_importance.index, ax=ax)
                 st.pyplot(fig)
 
-                st.subheader("SHAP Visualizations")
+                st.subheader("7. SHAP Visualizations")
                 shap_plot_type = st.selectbox("Select SHAP plot type", ["summary", "bar", "dependence", "bee swarm"], key="shap_plot_type")
 
                 explainer = shap.TreeExplainer(model)
@@ -198,7 +198,7 @@ if uploaded_file is not None:
                     st.pyplot(fig)
 
         with tab3:
-            st.subheader("📦 Download Trained Model and Data")
+            st.subheader("📦 8. Download Trained Model and Data")
 
             if "model" in st.session_state:
                 model_filename = "random_forest_model.pkl"
