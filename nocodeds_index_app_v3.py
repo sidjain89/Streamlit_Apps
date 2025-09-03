@@ -27,15 +27,17 @@ apps = {
     "Classification": {
         "fa_icon": "fa-square-poll-vertical",
         "apps": [
-            {"name": "Tree Classifier", "url": "https://example.com/class1", "fa_icon": "fa-tree", "desc": "Train/test decision trees and ensembles."},
-            {"name": "Logistic Regression", "url": "https://example.com/class2", "fa_icon": "fa-balance-scale", "desc": "Play with logistic regression and ROC curves."},
+            {"name": "Tree Classifier", "url": "https://decisiontreeclassification.streamlit.app/", "fa_icon": "fa-tree", "desc": "Train/test decision trees and ensembles."},
+            {"name": "Random Forest Classifier", "url": "https://randomforestclassification.streamlit.app/", "fa_icon": "fa-tree", "desc": "Train/test decision trees and ensembles using Random Forest Algorithm."},
+            {"name": "Logistic Regression", "url": "https://logisticregressionclassification.streamlit.app/", "fa_icon": "fa-balance-scale", "desc": "Play with logistic regression and ROC curves."},
+            {"name": "Logistic Regression", "url": "https://svmclassification.streamlit.app/", "fa_icon": "fa-balance-scale", "desc": "Predictive classification using Support Vector Machines"},
         ],
     },
     "Clustering": {
         "fa_icon": "fa-shapes",
         "apps": [
-            {"name": "K-Means Cluster", "url": "https://kmeanswithviz.streamlit.app/", "fa_icon": "fa-bullseye", "desc": "Cluster data and visualize results using K-Means."},
-            {"name": "DB Scan", "url": "https://dbscanclustering.streamlit.app/", "fa_icon": "fa-bullseye", "desc": "Cluster data and visualize results using K-Means."},
+            {"name": "K-Means", "url": "https://kmeanswithviz.streamlit.app/", "fa_icon": "fa-bullseye", "desc": "Cluster data and visualize results using K-Means."},
+            {"name": "DB Scan", "url": "https://dbscanclustering.streamlit.app/", "fa_icon": "fa-bullseye", "desc": "Cluster data and visualize results using DB Scan."},
         ],
     },
     "Media Optimization": {
@@ -132,8 +134,7 @@ st.title("✨ ML Apps Hub")
 
 st.markdown(
     """
-    Welcome to your one-stop portal for ML & Data Science tools at Walmart!  
-    *(Edit this intro to suit your needs, e.g., add usage tips, links, or a company blurb.)*
+    Welcome to your one-stop portal for ML & Data Science tools!
     """
 )
 st.markdown("---")
