@@ -6,3 +6,4 @@ seaborn
 plotly
 shap
 scikit-learn
+kaleido
