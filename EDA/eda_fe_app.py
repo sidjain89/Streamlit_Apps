@@ -182,7 +182,8 @@ if uploaded_file:
                 fig_corr = px.imshow(corr, text_auto=False, aspect="auto",
                                      color_continuous_scale="RdBu", zmin=-1, zmax=1)
                 st.plotly_chart(fig_corr, use_container_width=True)
-                download_plotly_fig(fig_corr, "correlation_matrix.png")
+                #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                #download_plotly_fig(fig_corr, "correlation_matrix.png")
             else:
                 st.info("Need at least two continuous columns for correlation.")
 
@@ -223,7 +224,8 @@ if uploaded_file:
                     opacity=0.7
                 )
                 st.plotly_chart(fig_scatter, use_container_width=True)
-                download_plotly_fig(fig_scatter, "scatter.png")
+                #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                #download_plotly_fig(fig_scatter, "scatter.png")
             else:
                 st.info("Need at least two continuous columns for scatter plot.")
 
@@ -245,7 +247,8 @@ if uploaded_file:
                     facet_col=None if facet_violin == "None" else facet_violin
                 )
                 st.plotly_chart(fig_violin, use_container_width=True)
-                download_plotly_fig(fig_violin, "violin.png")
+                #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                #download_plotly_fig(fig_violin, "violin.png")
             else:
                 st.info("Need at least one continuous and one categorical variable for violin plot.")
 
@@ -466,7 +469,8 @@ if uploaded_file:
                     cont = st.selectbox("Continuous value", options=continuous_cols)
                     fig = px.line(df.sort_values(date), x=date, y=cont)
                     st.plotly_chart(fig, use_container_width=True)
-                    download_plotly_fig(fig, "line_plot.png")
+                    #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                    #download_plotly_fig(fig, "line_plot.png")
 
                 elif adv_plot == "QQ Plot":
                     import scipy.stats as stats
@@ -528,7 +532,8 @@ if uploaded_file:
                         val = st.selectbox("Size/count column (optional)", options=["None"] + continuous_cols)
                         fig = px.sunburst(df, path=cats, values=None if val=="None" else val)
                         st.plotly_chart(fig, use_container_width=True)
-                        download_plotly_fig(fig, "sunburst.png")
+                        #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                        #download_plotly_fig(fig, "sunburst.png")
 
                 elif adv_plot == "Treemap":
                     if len(categorical_cols) < 2:
@@ -538,7 +543,8 @@ if uploaded_file:
                         val = st.selectbox("Size/count column (optional)", options=["None"] + continuous_cols)
                         fig = px.treemap(df, path=cats, values=None if val=="None" else val)
                         st.plotly_chart(fig, use_container_width=True)
-                        download_plotly_fig(fig, "treemap.png")
+                        #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                        #download_plotly_fig(fig, "treemap.png")
 
                 elif adv_plot == "Geospatial Map":
                     geo_cols = st.multiselect("Select lat/lon columns", options=all_columns, default=None)
@@ -566,7 +572,8 @@ if uploaded_file:
                             color=None if color == "None" else color
                         )
                         st.plotly_chart(fig, use_container_width=True)
-                        download_plotly_fig(fig, "3dscatter.png")
+                        #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                        #download_plotly_fig(fig, "3dscatter.png")
             except Exception as e:
                 st.warning(f"Plot failed: {e}")
 
