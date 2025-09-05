@@ -150,7 +150,8 @@ if uploaded_file:
                 data = pd.crosstab(df[cat1], df[cat2])
                 fig = px.bar(data, barmode='stack')
                 st.plotly_chart(fig)
-                download_plotly_fig(fig, "stacked_bar.png")
+                #Bug Fix 090525: disable download because of compatibility of issues streamlit cloud and plotly-kaliedo
+                #download_plotly_fig(fig, "stacked_bar.png")
                 st.write(data)
             elif univ_col in date_cols and plot_type == "Histogram":
                 freq = st.selectbox("Date histogram frequency", options=["D", "W", "M"], format_func=lambda x: dict(D="Day",W="Week",M="Month")[x])
