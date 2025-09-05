@@ -52,14 +52,14 @@ apps = {
         "Time Series": {
         "fa_icon": "fa-shapes",
         "apps": [
-            {"name": "Prophet", "url": "https://nocodeds.streamlit.app/Prophet", "fa_icon": "fa-bullseye", "desc": "Timeseries forecasts using FB Prophet","badge":"WIP"},
-            {"name": "LSTM", "url": "https://nocodeds.streamlit.app/LSTM", "fa_icon": "fa-bullseye", "desc": "Timeseries forecasts using LSTM","badge":"WIP"},
+            {"name": "Prophet (Coming Soon)", "url": "https://nocodeds.streamlit.app/Prophet", "fa_icon": "fa-bullseye", "desc": "Timeseries forecasts using FB Prophet","badge":"WIP"},
+            {"name": "LSTM (Coming Soon)", "url": "https://nocodeds.streamlit.app/LSTM", "fa_icon": "fa-bullseye", "desc": "Timeseries forecasts using LSTM","badge":"WIP"},
         ],
     },
     "Media Optimization": {
         "fa_icon": "fa-photo-film",
         "apps": [
-            {"name": "Media Mix Model (WIP)", "url": "https://nocodeds.streamlit.app/Media_Mix_Model", "fa_icon": "fa-bullhorn", "desc": "Optimize media spends with MMM.","badge":"WIP"},
+            {"name": "Media Mix Model (Coming Soon)", "url": "https://nocodeds.streamlit.app/Media_Mix_Model", "fa_icon": "fa-bullhorn", "desc": "Optimize media spends with MMM.","badge":"WIP"},
         ],
     },
 }
