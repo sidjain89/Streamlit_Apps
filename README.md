@@ -69,7 +69,7 @@ Let's connect and collaborate!
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ml-apps-hub.git
+   git clone https://github.com/<repository>.git
    cd ml-apps-hub
    ```
 
@@ -80,7 +80,7 @@ Let's connect and collaborate!
 
 3. Run the application:
    ```bash
-   streamlit run nocodeds_index_app_v7.py
+   streamlit run <filename>.py
    ```
 
 ## 📝 Features
