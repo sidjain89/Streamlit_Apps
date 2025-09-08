@@ -1,0 +1,4 @@
+Type,Dataset,Source
+Classification,banking_train_class.csv,https://www.kaggle.com/datasets/rashmiranu/banking-dataset-classification?resource=download&select=new_train.csv
+EDA/FE,sample_data_eda_fe.csv,CHAT GPT
+Clustering,creditcard_clustering,https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
