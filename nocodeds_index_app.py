@@ -65,7 +65,7 @@ apps = {
 }
 # ========== END SETUP ==========
 
-st.set_page_config(page_title="ML Apps Landing Page", layout="wide", page_icon="✨")
+st.set_page_config(page_title="ML Apps Hub", layout="wide", page_icon="✨")
 
 # ---- CSS FOR CARD STYLING ----
 st.markdown(
