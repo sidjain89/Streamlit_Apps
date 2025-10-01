@@ -8,3 +8,4 @@ plotly
 shap
 imbalanced-learn
 optuna
+lightgbm
